@@ -1,0 +1,18 @@
+<resources>
+	<string name="app_name">GADS Leaderboard Mobile Application</string>
+	<!-- TODO: Remove or change this placeholder text -->
+	<string name="hello_blank_fragment">Hello blank fragment</string>
+	<string name="submission_prompt">Are you sure you want to submit?</string>
+	<string name="yes_button_text">Yes</string>
+	<string name="first_name_hint">First Name</string>
+	<string name="last_name_hint">Last Name</string>
+	<string name="email_address_hint">Email Address</string>
+	<string name="project_on_github_link_hint">Project on Github (link)</string>
+	<string name="submit_button_text">Submit</string>
+	<string name="appbar_text">LEADERBOARD</string>
+	<string name="project_submission_button_text">Submit</string>
+	<string name="learning_hours_text">\" learning hours, \"</string>
+	<string name="skilliq_text">\" skill IQ Score, \"</string>
+	<string name="submission_successful_text">Submission Successful</string>
+	<string name="submission_unsuccessful_text">Submission not Successful</string>
+</resources>

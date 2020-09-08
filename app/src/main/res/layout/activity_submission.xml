@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#000000"
+	tools:context=".activities.SubmissionActivity">
+
+	<include layout="@layout/appbar2" />
+
+	<TextView
+		android:id="@+id/project_submission_text"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_centerHorizontal="true"
+		android:layout_marginTop="80dp"
+		android:text="Project Submission"
+		android:textColor="#F9A825"
+		android:textSize="24sp"
+		android:textStyle="bold" />
+
+	<View
+		android:id="@+id/horizontal_rule"
+		android:layout_width="match_parent"
+		android:layout_height="2dp"
+		android:layout_below="@id/project_submission_text"
+		android:layout_marginStart="8dp"
+		android:layout_marginTop="8dp"
+		android:layout_marginEnd="8dp"
+		android:background="@drawable/horizontal_rule" />
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:layout_below="@id/horizontal_rule"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			android:paddingTop="42dp">
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="58dp"
+				android:layout_weight="1"
+				android:orientation="horizontal">
+
+				<EditText
+					android:id="@+id/firstname_edittext"
+					android:layout_width="0dp"
+
+					android:layout_height="46dp"
+					android:layout_marginStart="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/edit_text"
+					android:hint="@string/first_name_hint"
+					android:inputType="textPersonName"
+					android:paddingStart="8dp"
+					android:paddingEnd="8dp"
+					android:textStyle="bold" />
+
+				<EditText
+					android:id="@+id/lastname_edittext"
+					android:layout_width="0dp"
+					android:layout_height="46dp"
+					android:layout_marginStart="8dp"
+					android:layout_marginEnd="8dp"
+					android:layout_weight="1"
+					android:background="@drawable/edit_text"
+					android:hint="@string/last_name_hint"
+					android:inputType="textPersonName"
+					android:paddingStart="8dp"
+					android:paddingEnd="8dp"
+					android:textStyle="bold" />
+
+			</LinearLayout>
+
+			<EditText
+				android:id="@+id/email_edittext"
+				android:layout_width="match_parent"
+				android:layout_height="46dp"
+				android:layout_marginStart="8dp"
+				android:layout_marginTop="58dp"
+				android:layout_marginEnd="8dp"
+				android:layout_weight="1"
+				android:background="@drawable/edit_text"
+				android:hint="@string/email_address_hint"
+				android:inputType="textEmailAddress"
+
+				android:paddingStart="8dp"
+				android:paddingEnd="8dp"
+				android:textStyle="bold" />
+
+			<EditText
+				android:id="@+id/github_link_edittext"
+				android:layout_width="match_parent"
+				android:layout_height="46dp"
+				android:layout_marginStart="8dp"
+				android:layout_marginTop="58dp"
+				android:layout_marginEnd="8dp"
+				android:layout_weight="1"
+				android:background="@drawable/edit_text"
+				android:hint="@string/project_on_github_link_hint"
+				android:inputType="textUri"
+
+				android:paddingStart="8dp"
+				android:paddingEnd="8dp"
+				android:textStyle="bold" />
+
+		</LinearLayout>
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="0dp"
+			android:layout_weight="1">
+
+			<Button
+				android:id="@+id/submission_btn"
+				android:layout_width="111dp"
+				android:layout_height="40dp"
+				android:layout_centerInParent="true"
+				android:background="@drawable/submit_button2"
+				android:text="@string/submit_button_text"
+				android:textAllCaps="false"
+				android:textColor="@color/colorAccent"
+				android:textSize="18sp"
+				android:textStyle="bold" />
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</RelativeLayout>

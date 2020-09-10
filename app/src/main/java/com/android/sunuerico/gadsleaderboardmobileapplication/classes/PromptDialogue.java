@@ -36,17 +36,19 @@ import static android.content.Context.MODE_PRIVATE;
 public class PromptDialogue extends AppCompatDialogFragment {
 
 
-	final Activity activity = (Activity) getActivity();
+	final Activity activity = getActivity();
+
+	private OkHttpClient.Builder okHttpClient = new OkHttpClient.Builder();
+
 
 	private Retrofit.Builder builder = new Retrofit.Builder()
 			.baseUrl("https://docs.google.com/forms/d/e/")
 			.addConverterFactory(GsonConverterFactory.create())
 			.client(okHttpClient.build());
-	private OkHttpClient.Builder okHttpClient = new OkHttpClient.Builder();
 
 	private ImageView cancel;
 	private Button yesBtn;
-//	private PromptDialogueListener promptDialogueListener;
+	//	private PromptDialogueListener promptDialogueListener;
 	private Retrofit retrofit = builder.build();
 
 	@NonNull
@@ -75,7 +77,7 @@ public class PromptDialogue extends AppCompatDialogFragment {
 			public void onClick(View view) {
 
 
-				SharedPreferences preferences = ((Activity) Objects.requireNonNull(getContext())).getSharedPreferences("Dialogue", MODE_PRIVATE);
+				SharedPreferences preferences = Objects.requireNonNull(getContext()).getSharedPreferences("Dialogue", MODE_PRIVATE);
 				String fname = preferences.getString("first name", "");
 				String lname = preferences.getString("last name", "");
 				String email = preferences.getString("email", "");
@@ -137,7 +139,7 @@ public class PromptDialogue extends AppCompatDialogFragment {
 				dialogueResponse(true);
 				openDialogue();
 				dismiss();
-				SharedPreferences dialogue = ((Activity) Objects.requireNonNull(getContext())).getSharedPreferences("Pop-up", MODE_PRIVATE);
+				SharedPreferences dialogue = Objects.requireNonNull(getContext()).getSharedPreferences("Pop-up", MODE_PRIVATE);
 				SharedPreferences.Editor prefEditor = dialogue.edit();
 				prefEditor.putBoolean("responseType", true);
 				prefEditor.apply();
@@ -149,7 +151,7 @@ public class PromptDialogue extends AppCompatDialogFragment {
 				dialogueResponse(false);
 				openDialogue();
 				dismiss();
-				SharedPreferences dialogue = ((Activity) Objects.requireNonNull(getContext())).getSharedPreferences("Pop-up", MODE_PRIVATE);
+				SharedPreferences dialogue = Objects.requireNonNull(getContext()).getSharedPreferences("Pop-up", MODE_PRIVATE);
 				SharedPreferences.Editor prefEditor = dialogue.edit();
 				prefEditor.putBoolean("responseType", false);
 				prefEditor.apply();

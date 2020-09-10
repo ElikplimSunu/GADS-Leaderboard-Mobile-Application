@@ -11,8 +11,8 @@
 	<string name="submit_button_text">Submit</string>
 	<string name="appbar_text">LEADERBOARD</string>
 	<string name="project_submission_button_text">Submit</string>
-	<string name="learning_hours_text">\" learning hours, \"</string>
-	<string name="skilliq_text">\" skill IQ Score, \"</string>
+	<string name="learning_hours_text"> learning hours, </string>
+	<string name="skilliq_text"> skill IQ Score, </string>
 	<string name="submission_successful_text">Submission Successful</string>
 	<string name="submission_unsuccessful_text">Submission not Successful</string>
 </resources>
